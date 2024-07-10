@@ -5,16 +5,18 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333; /* Sötét háttér */
-    color: #eee; /* Fehér szöveg */
+    background-color: #1a1a1a; /* Sötét háttér */
+    color: #f0f0f0; /* Világos szöveg */
     line-height: 1.6;
+    transition: background-color 0.5s, color 0.5s; /* Átmenet a színek változásához */
 }
 
 header {
-    background-color: #222; /* Sötét szürke */
+    background-color: #262626; /* Még sötétebb szürke */
     color: #fff;
     text-align: center;
     padding: 2rem 0;
+    animation: fadeIn 1s ease-in-out; /* Belépő animáció */
 }
 
 header p {
@@ -25,6 +27,8 @@ header p {
 nav {
     background-color: #111; /* Nagyon sötét szürke */
     padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Árnyék */
+    animation: slideDown 0.5s ease-in-out; /* Belépő animáció */
 }
 
 nav ul {
@@ -43,19 +47,27 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s, transform 0.3s; /* Átmenet és skálázás */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #444; /* Szürke háttér hover állapotban */
+    border-radius: 5px;
+    transform: scale(1.1); /* Nagyítás hover állapotban */
 }
 
 main {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #444; /* Sötét szürke */
+    background-color: #333; /* Sötét szürke */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out; /* Belépő animáció */
 }
 
 form {
@@ -69,23 +81,17 @@ input[type="file"] {
     padding: 10px;
     border: 1px solid #666; /* Sötét szürke keret */
     border-radius: 4px;
-    background-color: #555; /* Szürke */
-    color: #eee; /* Fehér szöveg */
+    background-color: #444; /* Szürke */
+    color: #eee; /* Világos szöveg */
     font-size: 14px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Átmenet és skálázás */
+}
+
+input[type="file"]:hover {
+    background-color: #555; /* Világosabb szürke hover állapotban */
+    transform: scale(1.05); /* Nagyítás hover állapotban */
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #007bff; /* Kék gomb */
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3; /* Sötétebb kék gomb hover állapotban */
-}
+    padding: 10px
