@@ -94,4 +94,17 @@ input[type="file"]:hover {
 }
 
 button {
-    padding: 10px
+    padding: 10px;
+    background-color: #ff6f61; /* Piros */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Átmenet és skálázás */
+}
+
+button:hover {
+    background-color: #ff3d2e; /* Sötétebb piros hover állapotban */
+    transform: scale(1.1); /* Nagyítás hover állapotban */
+}
