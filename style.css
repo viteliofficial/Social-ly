@@ -1,15 +1,15 @@
-/* styles.css */
+/* style.css */
 
-/* Basic Styles */
+/* Alap stílusok */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
     margin: 0;
     padding: 0;
     background: linear-gradient(45deg, #1a1a1a, #333, #1a1a1a);
     background-size: 600% 600%;
     animation: gradientShift 10s ease infinite;
-    color: #f0f0f0; /* Light text */
+    color: #f0f0f0; /* Világos szöveg */
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -20,13 +20,12 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Header */
 header {
-    background-color: rgba(38, 38, 38, 0.9); /* Darker transparent gray */
+    background-color: rgba(38, 38, 38, 0.9); /* Még sötétebb szürke áttetsző */
     color: #fff;
     text-align: center;
     padding: 2rem 0;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out; /* Belépő animáció */
     backdrop-filter: blur(10px);
 }
 
@@ -35,12 +34,11 @@ header p {
     margin-top: 0.5rem;
 }
 
-/* Navigation */
 nav {
-    background-color: rgba(17, 17, 17, 0.9); /* Very dark transparent gray */
+    background-color: rgba(17, 17, 17, 0.9); /* Nagyon sötét áttetsző szürke */
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    animation: slideDown 0.5s ease-in-out;
+    animation: slideDown 0.5s ease-in-out; /* Lecsúszó animáció */
     backdrop-filter: blur(10px);
 }
 
@@ -59,7 +57,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 5px 10px;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -70,11 +68,10 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Main Content */
 main {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 20px auto;
-    background-color: rgba(51, 51, 51, 0.9); /* Dark transparent gray */
+    background-color: rgba(51, 51, 51, 0.9); /* Sötét áttetsző szürke */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -82,7 +79,7 @@ main {
     grid-template-columns: 1fr 2fr;
     grid-gap: 20px;
     align-items: start;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out; /* Belépő animáció */
     backdrop-filter: blur(10px);
 }
 
@@ -92,19 +89,25 @@ main {
     margin-bottom: 20px;
 }
 
-/* Start Button */
+.video-item {
+    border: 1px solid #666;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(85, 85, 85, 0.9); /* Sötét áttetsző szürke */
+}
+
 #startButton {
-    background-color: #ff6f61;
+    background-color: #ff6f61; /* Piros */
     color: #fff;
     border: none;
-    padding: 20px 40px;
-    font-size: 1.5rem;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 #startButton:hover {
-    background-color: #ff3d2e;
+    background-color: #ff3d2e; /* Sötétebb piros hover állapotban */
     transform: scale(1.1);
 }
