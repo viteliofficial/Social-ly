@@ -1,10 +1,10 @@
 // Simulált adatbázisból származó videók
 const videos = [
-    { title: "Videó 1", url: "https://www.example.com/video1" },
-    { title: "Videó 2", url: "https://www.example.com/video2" },
-    { title: "Videó 3", url: "https://www.example.com/video3" },
-    { title: "Videó 4", url: "https://www.example.com/video4" },
-    { title: "Videó 5", url: "https://www.example.com/video5" }
+    { title: "Videó 1", url: "https://vm.tiktok.com/ZGeG3mUJ4/" },
+    { title: "Videó 2", url: "https://vm.tiktok.com/ZGeG3Mwap/" },
+    { title: "Videó 3", url: "https://vm.tiktok.com/ZGeG3ut8G/" },
+    { title: "Videó 4", url: "https://vm.tiktok.com/ZGeG3FGV7/" },
+    { title: "Videó 5", url: "https://vm.tiktok.com/ZGeG39tkh/" }
 ];
 
 // HTML elemek létrehozása és hozzáadása
