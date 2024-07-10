@@ -1,0 +1,80 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Sötét háttér */
+    color: #eee; /* Fehér szöveg */
+}
+
+header {
+    background-color: #222; /* Sötét szürke */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #444; /* Sötét szürke */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="file"] {
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #666; /* Sötét szürke keret */
+    border-radius: 4px;
+    background-color: #555; /* Szürke */
+    color: #eee; /* Fehér szöveg */
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Kék gomb */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Sötétebb kék gomb hover állapotban */
+}
+
+#videoList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.video-item {
+    border: 1px solid #666; /* Sötét szürke keret */
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #555; /* Szürke háttér */
+    transition: box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Fehér árnyék hover állapotban */
+}
+
+.video-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
