@@ -1,17 +1,14 @@
-/* styles.css */
-
-/* Alap stílusok */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333; /* Sötét háttér */
-    color: #eee; /* Fehér szöveg */
+    background-color: #1a1a1a; /* Sötét háttér */
+    color: #f0f0f0; /* Világos szöveg */
     line-height: 1.6;
 }
 
 header {
-    background-color: #222; /* Sötét szürke */
+    background-color: #262626; /* Még sötétebb szürke */
     color: #fff;
     text-align: center;
     padding: 2rem 0;
@@ -23,82 +20,3 @@ header p {
 }
 
 nav {
-    background-color: #111; /* Nagyon sötét szürke */
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #444; /* Sötét szürke */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 20px;
-    align-items: start;
-}
-
-#userProfile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#userProfile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-#userProfile h2 {
-    margin: 10px 0;
-}
-
-#videoList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-}
-
-.video-item {
-    border: 1px solid #666; /* Sötét szürke keret */
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #555; /* Szürke háttér */
-    transition: box-shadow 0.3s ease;
-}
-
-.video-item:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Fehér árnyék hover állapotban */
-}
-
-.video-item video {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
