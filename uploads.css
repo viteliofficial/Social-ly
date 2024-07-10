@@ -1,0 +1,91 @@
+/* uploads.css */
+
+/* Alap stílusok */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Sötét háttér */
+    color: #eee; /* Fehér szöveg */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #222; /* Sötét szürke */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+nav {
+    background-color: #111; /* Nagyon sötét szürke */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #444; /* Sötét szürke */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #666; /* Sötét szürke keret */
+    border-radius: 4px;
+    background-color: #555; /* Szürke */
+    color: #eee; /* Fehér szöveg */
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Kék gomb */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Sötétebb kék gomb hover állapotban */
+}
