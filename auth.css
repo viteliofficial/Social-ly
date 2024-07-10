@@ -24,10 +24,27 @@ header {
     color: #fff;
     text-align: center;
     padding: 2rem 0;
-    animation: fadeIn 1s ease-in-out; /* Belépő animáció */
+    animation: fadeIn 1s ease-in-out, moveUp 1s ease-in-out; /* Belépő és mozgató animációk */
     backdrop-filter: blur(10px);
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes moveUp {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+
 main {
-    max-width: 400px;
-    margin: 50px
+    max-width: 800px; /* Emeld ki ezt az értéket a jobb megjelenés érdekében */
+    margin: 50px auto; /* Középre igazítás */
+    animation: fadeIn 1s ease-in-out, growWidth 1s ease-in-out; /* Belépő és növekvő szélességű animációk */
+}
+
+@keyframes growWidth {
+    0% { width: 50%; }
+    100% { width: 100%; }
+}
