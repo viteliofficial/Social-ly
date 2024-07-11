@@ -1,9 +1,6 @@
-/* style.css */
-
-/* Alap stílusok */
-
+@import url('font.css');
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'gunplay';
     margin: 0;
     padding: 0;
     background: linear-gradient(45deg, #1a1a1a, #333, #1a1a1a);
@@ -89,12 +86,7 @@ main {
     margin-bottom: 20px;
 }
 
-.video-item {
-    border: 1px solid #666;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: rgba(85, 85, 85, 0.9); /* Sötét áttetsző szürke */
-}
+
 
 #startButton {
     background-color: #ff6f61; /* Piros */

@@ -1,50 +1,83 @@
 /* auth.css */
 
-/* Alap stílusok */
+/* Base styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(45deg, #1a1a1a, #333, #1a1a1a);
-    background-size: 600% 600%;
-    animation: gradientShift 10s ease infinite;
-    color: #f0f0f0; /* Világos szöveg */
-    line-height: 1.6;
-    overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #1a1a1a, #333, #1a1a1a);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+  color: #f0f0f0; /* Light text */
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* Header styles */
 header {
-    background-color: rgba(38, 38, 38, 0.9); /* Még sötétebb szürke áttetsző */
-    color: #fff;
-    text-align: center;
-    padding: 2rem 0;
-    animation: fadeIn 1s ease-in-out, moveUp 1s ease-in-out; /* Belépő és mozgató animációk */
-    backdrop-filter: blur(10px);
+  background-color: rgba(38, 38, 38, 0.9); /* Darker semi-transparent gray */
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  animation: fadeIn 1s ease-in-out, moveUp 1s ease-in-out; /* Fade-in and move-up animations */
+  backdrop-filter: blur(10px);
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes moveUp {
-    0% { transform: translateY(20px); }
-    100% { transform: translateY(0); }
+  0% { transform: translateY(20px); }
+  100% { transform: translateY(0); }
 }
 
+/* Main content section */
 main {
-    max-width: 800px; /* Emeld ki ezt az értéket a jobb megjelenés érdekében */
-    margin: 50px auto; /* Középre igazítás */
-    animation: fadeIn 1s ease-in-out, growWidth 1s ease-in-out; /* Belépő és növekvő szélességű animációk */
+  max-width: 600px; /* Adjusted for better readability */
+  margin: 50px auto; /* Centered horizontally */
+  animation: fadeIn 1s ease-in-out, growWidth 1s ease-in-out; /* Fade-in and grow-width animations */
 }
 
 @keyframes growWidth {
-    0% { width: 50%; }
-    100% { width: 100%; }
+  0% { width: 50%; }
+  100% { width: 100%; }
+}
+
+/* Form styles */
+form {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50; /* Green submit button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
