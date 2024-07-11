@@ -21,7 +21,7 @@ const firebaseConfig = {
       username = document.getElementById('username').value
       password = document.getElementById('password').value
       email = document.getElementById('email').value
-      follower = 0
+      follower = "1"
 
       // Validate input fields
       if (validate_email(email) == false || validate_password(password) == false) {
@@ -103,7 +103,7 @@ const firebaseConfig = {
               
               // Save username and level to localStorage
               localStorage.setItem('username', username);
-              localStorage.setItem('follower', user.follower);
+              localStorage.setItem('follower', follower);
               
               // Redirect to the menu page
               window.location.href = "index.html";

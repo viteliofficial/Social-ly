@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="video.css">
 </head>
-<body>
+<body onload="Scan_login()"">
+    <div class="profil">
+        <b><h2 id="username"></h2></b>
+        <h2 id="follower" class="">Követő: </h2>
+    </div>
     <header>
         <h1>Üdvözöl a Socially</h1>
         <p>Oszd meg videóidat a világgal!</p>
@@ -23,6 +27,7 @@
             <div id="videoList"></div> <!-- Itt jelennek meg a videók -->
         </section>
     </main>
+    <script src="sync-account.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
