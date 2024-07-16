@@ -17,7 +17,7 @@ function handleLogin(event) {
     // átirányítás egy másik oldalra
     window.location.href = "../index.html";
   } else {
-    alert('Hibás felhasználónév vagy jelszó.');
+    
   }
 }
 

@@ -13,30 +13,36 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-messaging.js"></script>  
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>  
 </head>
-<body onload="Scan_login()">
+<body>
     <nav>
         <ul>
+            <li><a href="index.html">🚪Home</a></li>
             <li><a href="uploads.html">⬆️Feltöltés</a></li>
-            <li><a href="profile.html">👤Profil</a></li>
         </ul>
     </nav>
-    <div class="profil">
-        <p style="font-size: 10px;">v0.0.1
-        <br></p>
-        <b><h2 id="username"></h2></b>
-        <h2 id="follower" ></h2>
-    </div>
-    <header>
-        <h1>Üdvözöl a Socially</h1>
-        <p>Oszd meg videóidat a világgal!</p>
-    </header>
-
     <main>
-        <section id="intro">
-            <div id="videoList"></div>
-        </section>
     </main>
+    <header>
+        <h1>Profil</h1>
+    </header>
+    <div>
+        <center>
+            <h2 id="username"></h2>
+            <h2 id="follower" ></h2>
+        <hr style="background-color: rgba(0, 0, 0, 0.582); padding-top: 1cm; color: rgba(0, 0, 0, 0.582); border-color: rgba(0, 0, 0, 0.582); outline-color: rgba(0, 0, 0, 0.582);">
+    </div>
+
+    <div>
+        <center><br><br>
+        <h2>Feltöltött videók</h2></center>
+        <ul id="videos_list">
+            <!-- Videók listája ide kerül -->
+        </ul>
+    </div>
+    
+    <script>
+
+    </script>
     <script src="sync-account.js"></script>
-    <script src="scripts.js"></script>
 </body>
 </html>

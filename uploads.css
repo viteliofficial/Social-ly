@@ -1,8 +1,6 @@
-/* uploads.css */
-
-/* Alap stílusok */
+@import url('Font.css');
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'gunplay';
     margin: 0;
     padding: 0;
     background-color: #1a1a1a; /* Sötét háttér */
