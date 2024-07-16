@@ -1,5 +1,6 @@
 // Initialize Firebase 
-const firebaseConfig = { apiKey: "AIzaSyBJnSlqLNlVqQ_-U4Cz0KTI0TnopiWwwUU", authDomain: "socially-684f7.firebaseapp.com", databaseURL: "https://socially-684f7-default-rtdb.firebaseio.com", projectId: "socially-684f7", storageBucket: "socially-684f7.appspot.com", messagingSenderId: "671621318686", appId: "1:671621318686:web:1fa7e78755553c7377c60f", measurementId: "G-RK1TY34ZPH" }; firebase.initializeApp(firebaseCo
+const firebaseConfig = { apiKey: "AIzaSyBJnSlqLNlVqQ_-U4Cz0KTI0TnopiWwwUU", authDomain: "socially-684f7.firebaseapp.com", databaseURL: "https://socially-684f7-default-rtdb.firebaseio.com", projectId: "socially-684f7", storageBucket: "socially-684f7.appspot.com", messagingSenderId: "671621318686", appId: "1:671621318686:web:1fa7e78755553c7377c60f", measurementId: "G-RK1TY34ZPH" }; 
+firebase.initializeApp(firebaseCo
 nfig); 
 const auth = firebase.auth(); 
 const database = firebase.database(); 
