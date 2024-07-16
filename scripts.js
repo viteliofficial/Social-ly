@@ -15,6 +15,8 @@ firebase.initializeApp(firebaseConfig);
 const storage = firebase.storage();
 const database = firebase.database();
 const videoListElem = document.getElementById('videoList');
+const videoCountElem = document.getElementById('allvideo_count');
+let videoCount = 0;
 
 // Function to shuffle an array
 function shuffle(array) {
@@ -51,6 +53,9 @@ function fetchUserVideos(userId) {
   userVideosRef.listAll().then(function(result) {
     const shuffledItems = shuffle(result.items);
 
+    videoCount += result.items.length;
+    updateVideoCount();
+
     shuffledItems.forEach(function(videoRef) {
       const videoId = videoRef.name.split('.')[0];
 
@@ -73,6 +78,13 @@ function fetchUserVideos(userId) {
   }).catch(function(error) {
     console.error('Error listing videos in storage for user', userId, ':', error.message);
   });
+}
+
+// Function to update the video count in the DOM
+function updateVideoCount() {
+  if (videoCountElem) {
+    videoCountElem.textContent = "Ennyi videó van feltöltve: " + videoCount;
+  }
 }
 
 // Function to fetch and display videos from all users
