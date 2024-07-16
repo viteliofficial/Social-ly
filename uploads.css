@@ -131,16 +131,86 @@ button:hover {
     background-color: #ff3d2e; /* Sötétebb piros hover állapotban */
     transform: scale(1.1); /* Nagyítás hover állapotban */
 }
+
 #progressBarContainer {
     width: 100%;
     height: 10px;
     background-color: #ddd;
     margin-top: 10px;
-  }
+}
   
-  #progressBar {
+#progressBar {
     height: 100%;
     background-color: #4caf50;
     width: 0%;
-  }
-  
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    main {
+        width: 90%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input[type="file"] {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem 0;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    main {
+        width: 95%;
+        padding: 10px;
+    }
+
+    input[type="file"] {
+        font-size: 10px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+}
