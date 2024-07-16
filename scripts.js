@@ -32,7 +32,7 @@ const firebaseConfig = {
       videoElem.classList.add('video-item');
       videoElem.innerHTML = `
         <div class="video-thumbnail">
-          <video preload="metadata" muted controls>
+          <video preload="metadata"controls>
             <source src="${url}" type="video/mp4">
             Your browser does not support the video tag.
           </video>
