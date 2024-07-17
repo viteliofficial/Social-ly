@@ -103,3 +103,24 @@ main {
     background-color: #ff3d2e; /* Sötétebb piros hover állapotban */
     transform: scale(1.1);
 }
+#searchBar {
+    background-color: transparent;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#searchBar:focus {
+    color: white;
+    background-color: #00000093;
+    border-width: 2px;
+    border-color: #ff6f61;
+    box-shadow: 0 5 10px #ff6f61;
+    outline: none;
+}
