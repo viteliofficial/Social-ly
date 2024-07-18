@@ -8,12 +8,13 @@ const firebaseConfig = {
     messagingSenderId: "671621318686",
     appId: "1:671621318686:web:1fa7e78755553c7377c60f",
     measurementId: "G-RK1TY34ZPH"
-  };
+};
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 const db = firebase.firestore();
+const storage = firebase.storage();
 
 // Function to fetch user profile data from Firestore
 async function fetchUserProfile(uid) {
@@ -23,19 +24,7 @@ async function fetchUserProfile(uid) {
             const userData = userDoc.data();
             document.getElementById("username").textContent = userData.username || "Felhasználó";
             document.getElementById("follower").textContent = userData.followers || "0";
-            const videosList = document.getElementById("videos_list");
-            videosList.innerHTML = ""; // Clear previous list items
-            if (userData.videos && userData.videos.length > 0) {
-                userData.videos.forEach(video => {
-                    const li = document.createElement("li");
-                    li.textContent = video;
-                    videosList.appendChild(li);
-                });
-            } else {
-                const li = document.createElement("li");
-                li.textContent = "Nincsenek feltöltött videók.";
-                videosList.appendChild(li);
-            }
+            fetchUserVideos(uid); // Fetch and display user videos
         } else {
             console.log("No such document!");
         }
@@ -56,6 +45,37 @@ async function fetchUserProfile(uid) {
             errorMessage.textContent = "Failed to fetch user profile. Please try again later.";
             document.body.appendChild(errorMessage);
         }
+    }
+}
+
+// Function to fetch user videos from Firebase Storage
+async function fetchUserVideos(uid) {
+    try {
+        const videosList = document.getElementById("videos_list");
+        videosList.innerHTML = ""; // Clear previous list items
+
+        const videoRefs = await storage.ref(`User/${uid}/video`).listAll();
+        if (videoRefs.items.length > 0) {
+            for (let itemRef of videoRefs.items) {
+                const videoURL = await itemRef.getDownloadURL();
+                const li = document.createElement("li");
+                const videoElement = document.createElement("video");
+                videoElement.src = videoURL;
+                videoElement.controls = true;
+                videoElement.width = 320; // Adjust as needed
+                li.appendChild(videoElement);
+                videosList.appendChild(li);
+            }
+        } else {
+            const li = document.createElement("li");
+            li.textContent = "Nincsenek feltöltött videók.";
+            videosList.appendChild(li);
+        }
+    } catch (error) {
+        console.error("Error fetching user videos:", error);
+        const errorMessage = document.createElement("p");
+        errorMessage.textContent = "Failed to fetch user videos. Please try again later.";
+        document.body.appendChild(errorMessage);
     }
 }
 
