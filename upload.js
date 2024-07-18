@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     // Upload video file to Firebase Storage
-    const storageRef = storage.ref('video/' + user.uid + '/' + file.name);
+    const storageRef = storage.ref('videos/' + user.uid + '/' + file.name);
     const uploadTask = storageRef.put(file);
     
     // Update progress bar during upload
