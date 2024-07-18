@@ -50,6 +50,7 @@ const firebaseConfig = {
           username : username,
           password : password,
           follower : follower,
+          verified : false,
           last_login : Date.now()
         };
     
