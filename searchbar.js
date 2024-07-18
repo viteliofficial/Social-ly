@@ -1,7 +1,3 @@
-// searchbar.js
-
-// Initialize Firebase
-
 // Ensure Firebase is initialized before accessing Firestore
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -14,28 +10,39 @@ function searchVideos() {
   const videoListDiv = document.getElementById('videoList');
   videoListDiv.innerHTML = ''; // Clear previous results
 
-  db.collection("videos").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      const data = doc.data();
-      const description = data.description.toLowerCase();
+  db.collection("User").get().then((userSnapshot) => {
+    let videoCount = 0;
 
-      if (description.includes(searchTerm)) {
-        const videoElement = document.createElement('div');
-        videoElement.innerHTML = `
-          <h3>${data.title}</h3>
-          <p>${data.description}</p>
-          <video controls>
-            <source src="${data.videoUrl}" type="video/mp4">
-          </video>
-        `;
-        videoListDiv.appendChild(videoElement);
-      }
+    userSnapshot.forEach((userDoc) => {
+      db.collection(`User/${userDoc.id}/video`).get().then((videoSnapshot) => {
+        videoSnapshot.forEach((videoDoc) => {
+          const data = videoDoc.data();
+          const description = data.description.toLowerCase();
+
+          if (description.includes(searchTerm)) {
+            const videoElement = document.createElement('div');
+            videoElement.innerHTML = `
+              <h3>${data.title}</h3>
+              <p>${data.description}</p>
+              <video controls>
+                <source src="${data.videoUrl}" type="video/mp4">
+              </video>
+            `;
+            videoListDiv.appendChild(videoElement);
+            videoCount++;
+          }
+        });
+
+        if (videoListDiv.innerHTML === '') {
+          videoListDiv.innerHTML = '<p>No videos found.</p>';
+        }
+
+        document.getElementById('allvideo_count').textContent = `Total Videos: ${videoCount}`;
+      }).catch((error) => {
+        console.error("Error getting videos: ", error);
+      });
     });
-
-    if (videoListDiv.innerHTML === '') {
-      videoListDiv.innerHTML = '<p>Nincs találat.</p>';
-    }
   }).catch((error) => {
-    console.error("Error searching videos: ", error);
+    console.error("Error getting users: ", error);
   });
 }
