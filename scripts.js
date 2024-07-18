@@ -83,7 +83,7 @@ function fetchUserVideos(userId) {
 // Function to update the video count in the DOM
 function updateVideoCount() {
   if (videoCountElem) {
-    videoCountElem.textContent = "Ennyi videó van feltöltve: " + videoCount;
+    videoCountElem.textContent = "Ennyi tartalom van feltöltve: " + videoCount;
   }
 }
 
