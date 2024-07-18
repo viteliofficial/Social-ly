@@ -33,20 +33,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Validate file selection
     if (!fileInput.files || fileInput.files.length === 0) {
-      alert('Válaszd ki a videót amit felszeretnél tölteni');
+      alert('Válaszd ki amit felszeretnél tölteni');
       return;
     }
     
     const file = fileInput.files[0];
     
-    // Validate file type (example: allow only video files)
-    if (!file.type.startsWith('video/')) {
-      alert('Csak videófájl!');
-      return;
-    }
-    
+
     // Upload video file to Firebase Storage
-    const storageRef = storage.ref('videos/' + user.uid + '/' + file.name);
+    const storageRef = storage.ref('video/' + user.uid + '/' + file.name);
     const uploadTask = storageRef.put(file);
     
     // Update progress bar during upload
