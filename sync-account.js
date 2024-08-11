@@ -1,4 +1,6 @@
-localStorage.removeItem('follower')
+// FIX BUG
+localStorage.removeItem('follower');
+
 // ID
 username = document.getElementById('username').value
 follower = document.getElementById('follower').value
