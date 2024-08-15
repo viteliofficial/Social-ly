@@ -64,7 +64,7 @@ function fetchUserVideos(userId) {
 
       // Fetch description from Firebase Realtime Database
       database.ref(videoRefPath + '/description').once('value').then(function(snapshot) {
-        const description = snapshot.exists() ? snapshot.val() : 'No description available';
+        const description = snapshot.exists() ? snapshot.val() : '';
 
         videoRef.getDownloadURL().then(function(url) {
           createVideoElement(url, videoRef.name, description);
