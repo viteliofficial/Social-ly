@@ -1,12 +1,13 @@
 @import url('Font.css');
+
 body {
-    font-family: 'gunplay';
+    font-family: 'gunplay', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(45deg, #1a1a1a, #333, #1a1a1a);
     background-size: 600% 600%;
     animation: gradientShift 10s ease infinite;
-    color: #f0f0f0; /* Világos szöveg */
+    color: #f0f0f0; /* Light text */
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -18,11 +19,11 @@ body {
 }
 
 header {
-    background-color: rgba(38, 38, 38, 0.9); /* Még sötétebb szürke áttetsző */
+    background-color: rgba(38, 38, 38, 0.9); /* Darker semi-transparent gray */
     color: #fff;
     text-align: center;
     padding: 2rem 0;
-    animation: fadeIn 1s ease-in-out; /* Belépő animáció */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
     backdrop-filter: blur(10px);
 }
 
@@ -32,15 +33,15 @@ header p {
 }
 
 nav {
-    background-color: rgba(17, 17, 17, 0.9); /* Nagyon sötét áttetsző szürke */
+    background-color: rgba(17, 17, 17, 0.9); /* Very dark semi-transparent gray */
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    animation: slideDown 0.5s ease-in-out; /* Lecsúszó animáció */
+    animation: slideDown 0.5s ease-in-out; /* Slide-down animation */
     backdrop-filter: blur(10px);
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -68,7 +69,7 @@ nav ul li a:hover {
 main {
     max-width: 800px;
     margin: 20px auto;
-    background-color: rgba(51, 51, 51, 0.9); /* Sötét áttetsző szürke */
+    background-color: rgba(51, 51, 51, 0.9); /* Dark semi-transparent gray */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -76,7 +77,7 @@ main {
     grid-template-columns: 1fr 2fr;
     grid-gap: 20px;
     align-items: start;
-    animation: fadeIn 1s ease-in-out; /* Belépő animáció */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
     backdrop-filter: blur(10px);
 }
 
@@ -86,10 +87,8 @@ main {
     margin-bottom: 20px;
 }
 
-
-
 #startButton {
-    background-color: #ff6f61; /* Piros */
+    background-color: #ff6f61; /* Red */
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -100,9 +99,10 @@ main {
 }
 
 #startButton:hover {
-    background-color: #ff3d2e; /* Sötétebb piros hover állapotban */
-    transform: scale(1.1);
+    background-color: #ff3d2e; /* Darker red on hover */
+    transform: scale(1.05);
 }
+
 #searchBar {
     background-color: transparent;
     width: 100%;
@@ -112,15 +112,15 @@ main {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
 #searchBar:focus {
-    color: white;
-    background-color: #00000093;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
     border-width: 2px;
     border-color: #ff6f61;
-    box-shadow: 0 5 10px #ff6f61;
+    box-shadow: 0 0 10px #ff6f61;
     outline: none;
 }
