@@ -27,6 +27,7 @@ header {
   padding: 2rem 0;
   animation: fadeIn 1s ease-in-out, moveUp 1s ease-in-out; /* Fade-in and move-up animations */
   backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Adds depth */
 }
 
 @keyframes fadeIn {
@@ -44,6 +45,9 @@ main {
   max-width: 600px; /* Adjusted for better readability */
   margin: 50px auto; /* Centered horizontally */
   animation: fadeIn 1s ease-in-out, growWidth 1s ease-in-out; /* Fade-in and grow-width animations */
+  border-radius: 10px;
+  overflow: hidden; /* Ensures child elements don't overflow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow */
 }
 
 @keyframes growWidth {
@@ -57,17 +61,30 @@ form {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  animation: fadeIn 0.5s ease-in-out; /* Form fade-in */
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+/* Input field styles */
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for focus */
 }
 
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Green shadow on focus */
+}
+
+/* Submit button styles */
 input[type="submit"] {
   background-color: #4CAF50; /* Green submit button */
   color: white;
@@ -75,9 +92,36 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+  font-weight: bold; /* Bold text for better visibility */
 }
 
 input[type="submit"]:hover {
   background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+input[type="submit"]:active {
+  transform: scale(0.95); /* Pressed effect */
+}
+
+/* Additional styles for improved accessibility */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold; /* Bold label text */
+}
+
+.error-message {
+  color: #ff4c4c; /* Red color for error messages */
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-size: 0.9em; /* Slightly smaller font */
+  opacity: 0; /* Hidden by default */
+  animation: fadeInError 0.5s ease forwards; /* Fade-in effect for error messages */
+}
+
+@keyframes fadeInError {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
