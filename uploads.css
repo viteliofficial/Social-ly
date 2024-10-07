@@ -1,20 +1,21 @@
 @import url('Font.css');
+
 body {
-    font-family: 'gunplay';
+    font-family: 'gunplay', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Sötét háttér */
-    color: #f0f0f0; /* Világos szöveg */
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text */
     line-height: 1.6;
-    transition: background-color 0.5s, color 0.5s; /* Átmenet a színek változásához */
+    transition: background-color 0.5s, color 0.5s; /* Transition for color changes */
 }
 
 header {
-    background-color: #262626; /* Még sötétebb szürke */
+    background-color: #262626; /* Darker gray */
     color: #fff;
     text-align: center;
     padding: 2rem 0;
-    animation: fadeIn 1s ease-in-out, slideDown 0.5s ease-in-out; /* Belépő és lecsúszó animációk */
+    animation: fadeIn 1s ease-in-out, slideDown 0.5s ease-in-out; /* Fade-in and slide-down animations */
 }
 
 @keyframes fadeIn {
@@ -33,10 +34,10 @@ header p {
 }
 
 nav {
-    background-color: #111; /* Nagyon sötét szürke */
+    background-color: #111; /* Very dark gray */
     padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Árnyék */
-    animation: slideDown 0.5s ease-in-out; /* Lecsúszó animáció */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow */
+    animation: slideDown 0.5s ease-in-out; /* Slide-down animation */
 }
 
 nav ul {
@@ -56,33 +57,33 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     padding: 5px 10px;
-    transition: background-color 0.3s, transform 0.3s; /* Átmenet és skálázás */
+    transition: background-color 0.3s, transform 0.3s; /* Transition and scale */
 }
 
 nav ul li a:hover {
-    background-color: #444; /* Szürke háttér hover állapotban */
+    background-color: #444; /* Gray background on hover */
     border-radius: 5px;
-    transform: scale(1.1); /* Nagyítás hover állapotban */
+    transform: scale(1.1); /* Scale on hover */
 }
 
 main {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #333; /* Sötét szürke */
+    background-color: #333; /* Dark gray */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: fadeIn 1s ease-in-out; /* Belépő animáció */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: slideUp 0.5s ease-in-out; /* Felfelé csúszó animáció */
+    animation: slideUp 0.5s ease-in-out; /* Slide-up animation */
 }
 
 @keyframes slideUp {
@@ -93,30 +94,30 @@ form {
 input[type="file"] {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #666; /* Sötét szürke keret */
+    border: 1px solid #666; /* Dark gray border */
     border-radius: 4px;
-    background-color: #444; /* Szürke */
-    color: #eee; /* Világos szöveg */
+    background-color: #444; /* Gray */
+    color: #eee; /* Light text */
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Átmenet és skálázás */
+    transition: background-color 0.3s, transform 0.3s; /* Transition and scale */
 }
 
 input[type="file"]:hover {
-    background-color: #555; /* Világosabb szürke hover állapotban */
-    transform: scale(1.05); /* Nagyítás hover állapotban */
+    background-color: #555; /* Lighter gray on hover */
+    transform: scale(1.05); /* Scale on hover */
 }
 
 button {
     padding: 10px;
-    background-color: #ff6f61; /* Piros */
+    background-color: #ff6f61; /* Red */
     color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Átmenet és skálázás */
-    animation: pulse 2s infinite; /* Pulsáló animáció */
+    transition: background-color 0.3s, transform 0.3s; /* Transition and scale */
+    animation: pulse 2s infinite; /* Pulsating animation */
 }
 
 @keyframes pulse {
@@ -126,8 +127,8 @@ button {
 }
 
 button:hover {
-    background-color: #ff3d2e; /* Sötétebb piros hover állapotban */
-    transform: scale(1.1); /* Nagyítás hover állapotban */
+    background-color: #ff3d2e; /* Darker red on hover */
+    transform: scale(1.1); /* Scale on hover */
 }
 
 #progressBarContainer {
@@ -136,11 +137,17 @@ button:hover {
     background-color: #ddd;
     margin-top: 10px;
 }
-  
+
 #progressBar {
     height: 100%;
     background-color: #4caf50;
     width: 0%;
+    animation: progressAnimation 3s forwards; /* Progress bar animation */
+}
+
+@keyframes progressAnimation {
+    from { width: 0%; }
+    to { width: 100%; }
 }
 
 /* Responsive Styles */
